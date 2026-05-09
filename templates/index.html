@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Road Runner Electric</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logos-wrapper">
+            <a href="#home" class="logo-container">
+                <img src="/assets/images/logo/SAE logo.webp" alt="SAE Logo" class="partner-logo sae-logo">
+                <img src="/assets/images/logo/NIT_Rourkela_Colour_Logo.svg" alt="NIT Rourkela Logo" class="partner-logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Team Logo" class="team-logo">
+                <div class="logo-text">
+                    <span class="prefix-red">TEAM</span> ROAD RUNNER <span class="suffix-cyan">ELECTRIC</span>
+                </div>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#car">The Machine</a></li>
+            <li><a href="/team">Our Team</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="/contact" class="btn-join-nav">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1><span class="highlight-red">DESIGNING</span> THE <span class="highlight">FUTURE</span></h1>
+            <p>The Official Formula Student Electric Team of NIT Rourkela.</p>
+            <div class="stats-row">
+                <div class="stat"><h3>3.5s</h3><span>0-100 KMPH</span></div>
+                <div class="stat"><h3>80kW</h3><span>PEAK POWER</span></div>
+            </div>
+            <a href="#car" class="cta-button">View Prototype</a>
+        </div>
+    </section>
+
+    <section id="car" class="section-dark">
+        <h2>THE <span class="highlight">MACHINE</span></h2>
+        <div class="tech-showcase">
+            <div class="tech-text">
+                <h3>AERODYNAMIC <span class="highlight-red">CHASSIS</span></h3>
+                <p>Our tubular space-frame chassis is engineered for maximum torsional rigidity while minimizing weight.</p>
+                <ul class="tech-specs">
+                    <li>Material: AISI 4130 Chromoly Steel</li>
+                    <li>Weight: 28 kg</li>
+                </ul>
+            </div>
+            <div class="tech-image"><img src="{{ url_for('static', filename='chassis.jpg') }}" alt="Chassis"></div>
+        </div>
+        <div class="tech-showcase reverse">
+            <div class="tech-image"><img src="{{ url_for('static', filename='accumulator.jpg') }}" alt="Accumulator"></div>
+            <div class="tech-text">
+                <h3>HIGH VOLTAGE <span class="highlight">ACCUMULATOR</span></h3>
+                <p>Custom-designed Li-Ion battery pack with integrated BMS.</p>
+                <ul class="tech-specs">
+                    <li>Voltage: 400V Max</li>
+                    <li>Capacity: 6.8 kWh</li>
+                </ul>
+            </div>
+        </div>
+    <section class="section-dark" style="background: #020508;">
+    <h2>EXECUTIVE <span class="highlight-red">BODIES</span></h2>
+    <div class="team-grid">
+        <div class="team-card">
+            <div class="member-img-box"><img src="{{ url_for('static', filename='president.jpg') }}" alt="President"></div>
+            <div class="member-info"><h3>Jatin Saini</h3><p class="role">Team Manager</p></div>
+        </div>
+        <div class="team-card">
+            <div class="member-img-box"><img src="{{ url_for('static', filename='person1.jpg') }}" alt="Captain"></div>
+            <div class="member-info"><h3>Priyanshu Singh</h3><p class="role">Team Captain</p></div>
+        </div>
+        <div class="team-card">
+            <div class="member-img-box"><img src="{{ url_for('static', filename='person2.jpg') }}" alt="Vice Captain"></div>
+            <div class="member-info"><h3>Kunal R. Solanki</h3><p class="role">Vice Captain</p></div>
+        </div>
+
+        <div class="team-card">
+            <div class="member-img-box"><img src="{{ url_for('static', filename='mech_head.jpg') }}" alt="Chief Mechanical Engineer"></div>
+            <div class="member-info"><h3>Rudra Anjiwadekar</h3><p class="role">Chief Mechanical Engineer</p></div>
+        </div>
+        <div class="team-card">
+            <div class="member-img-box"><img src="{{ url_for('static', filename='elec_head.jpg') }}" alt="Chief Electrical Engineer"></div>
+            <div class="member-info"><h3>Ankit Shaw</h3><p class="role">Chief Electrical Engineer</p></div>
+        </div>
+        <div class="team-card">
+            <div class="member-img-box"><img src="{{ url_for('static', filename='mfg_head.jpg') }}" alt="Manufacturing Head"></div>
+            <div class="member-info"><h3>Kuldeep Mandal</h3><p class="role">Manufacturing Head</p></div>
+        </div>
+    </div>
+</section>
+
+    <section id="sponsors" class="section-light">
+        <h2>OUR <span class="highlight-red">PARTNERS</span></h2>
+        <div class="sponsor-grid">
+            <div class="sponsor-box"><img src="{{ url_for('static', filename='ntpc.png') }}" class="sponsor-img"></div>
+            <div class="sponsor-box"><img src="{{ url_for('static', filename='sail.png') }}" class="sponsor-img"></div>
+            <div class="sponsor-box"><img src="{{ url_for('static', filename='mathworks.png') }}" class="sponsor-img"></div>
+            <div class="sponsor-box"><img src="{{ url_for('static', filename='solidworks.png') }}" class="sponsor-img"></div>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2024 Team Road Runner Electric.</p></footer>
+</body>
+</html>

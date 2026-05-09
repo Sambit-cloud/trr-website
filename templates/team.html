@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the Team - TRR Electric</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logos-wrapper">
+            <a href="/" class="logo-container">
+                <img src="/assets/images/logo/SAE logo.webp" alt="SAE Logo" class="partner-logo sae-logo">
+                <img src="/assets/images/logo/NIT_Rourkela_Colour_Logo.svg" alt="NIT Rourkela Logo" class="partner-logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Team Logo" class="team-logo">
+                <div class="logo-text"><span class="prefix-red">TEAM</span> ROAD RUNNER <span class="suffix-cyan">ELECTRIC</span></div>
+            </a>
+        </div>
+        <ul class="nav-links"><li><a href="/" class="btn-back">Back to Home</a></li></ul>
+    </nav>
+
+    <section class="section-dark" style="min-height: 100vh; padding-top: 120px;">
+        <h2>MEET THE <span class="highlight">CREW</span></h2>
+        
+        <div class="team-grid">
+            
+            <div class="team-card">
+                <div class="member-img-box"><img src="{{ url_for('static', filename='person3.jpg') }}" alt="Member"></div>
+                <div class="member-info"><h3>RAHUL M.</h3><p class="role">Technical Head</p></div>
+            </div>
+
+            <div class="team-card">
+                <div class="member-img-box" style="background: #222;"></div>
+                <div class="member-info"><h3>PRIYA S.</h3><p class="role">Electrical Lead</p></div>
+            </div>
+
+            <div class="team-card">
+                <div class="member-img-box" style="background: #222;"></div>
+                <div class="member-info"><h3>AMIT B.</h3><p class="role">Chassis Lead</p></div>
+            </div>
+
+            </div>
+    </section>
+
+</body>
+</html>
