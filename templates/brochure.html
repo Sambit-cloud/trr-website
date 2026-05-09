@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet the Team - TRR Electric</title>
+    <title>Brochure - TRR Electric</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-
     <nav class="navbar">
         <div class="logos-wrapper">
             <a href="/" class="logo-container">
@@ -43,28 +42,33 @@
         nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { btn.classList.remove('open'); nav.classList.remove('open'); }));
     </script>
 
-    <section class="section-dark" style="min-height: 100vh; padding-top: 120px;">
-        <h2>MEET THE <span class="highlight">CREW</span></h2>
-        
-        <div class="team-grid">
-            
-            <div class="team-card">
-                <div class="member-img-box"><img src="{{ url_for('static', filename='person3.jpg') }}" alt="Member"></div>
-                <div class="member-info"><h3>RAHUL M.</h3><p class="role">Technical Head</p></div>
-            </div>
-
-            <div class="team-card">
-                <div class="member-img-box" style="background: #222;"></div>
-                <div class="member-info"><h3>PRIYA S.</h3><p class="role">Electrical Lead</p></div>
-            </div>
-
-            <div class="team-card">
-                <div class="member-img-box" style="background: #222;"></div>
-                <div class="member-info"><h3>AMIT B.</h3><p class="role">Chassis Lead</p></div>
-            </div>
-
-            </div>
+    <section class="page-hero">
+        <h1>BROCHURE</h1>
+        <p>Everything you need to know about Team Road Runner Electric.</p>
     </section>
 
+    <section class="brochure-section">
+        <div class="brochure-cards">
+
+            <!-- Sponsorship Brochure -->
+            <div class="brochure-card">
+                <div class="brochure-icon">&#128196;</div>
+                <h3>SPONSORSHIP <span class="suffix-cyan">BROCHURE</span></h3>
+                <p>Our sponsorship package detailing partnership tiers, benefits, and exposure opportunities.</p>
+                <a href="#" class="brochure-btn">Download PDF</a>
+            </div>
+
+            <!-- Team Brochure -->
+            <div class="brochure-card">
+                <div class="brochure-icon">&#9881;</div>
+                <h3>TEAM <span class="highlight-red">OVERVIEW</span></h3>
+                <p>A full overview of our team structure, technical achievements, and competition history.</p>
+                <a href="#" class="brochure-btn">Download PDF</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer><p>&copy; 2024 Team Road Runner Electric.</p></footer>
 </body>
 </html>

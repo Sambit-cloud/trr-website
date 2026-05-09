@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet the Team - TRR Electric</title>
+    <title>Research - TRR Electric</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-
     <nav class="navbar">
         <div class="logos-wrapper">
             <a href="/" class="logo-container">
@@ -43,28 +42,40 @@
         nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { btn.classList.remove('open'); nav.classList.remove('open'); }));
     </script>
 
-    <section class="section-dark" style="min-height: 100vh; padding-top: 120px;">
-        <h2>MEET THE <span class="highlight">CREW</span></h2>
-        
-        <div class="team-grid">
-            
-            <div class="team-card">
-                <div class="member-img-box"><img src="{{ url_for('static', filename='person3.jpg') }}" alt="Member"></div>
-                <div class="member-info"><h3>RAHUL M.</h3><p class="role">Technical Head</p></div>
-            </div>
-
-            <div class="team-card">
-                <div class="member-img-box" style="background: #222;"></div>
-                <div class="member-info"><h3>PRIYA S.</h3><p class="role">Electrical Lead</p></div>
-            </div>
-
-            <div class="team-card">
-                <div class="member-img-box" style="background: #222;"></div>
-                <div class="member-info"><h3>AMIT B.</h3><p class="role">Chassis Lead</p></div>
-            </div>
-
-            </div>
+    <section class="page-hero">
+        <h1>RESEARCH <span class="highlight">WORKS</span></h1>
+        <p>Technical papers and engineering studies by the TRR Electric team.</p>
     </section>
 
+    <section class="research-section">
+
+        <!-- Paper card — duplicate this block to add more papers -->
+        <div class="research-card">
+            <div class="research-meta">
+                <span class="research-tag">Powertrain</span>
+                <span class="research-year">2024</span>
+            </div>
+            <h3>Design and Analysis of High-Voltage Accumulator for Formula Student EV</h3>
+            <p>A study on the structural and thermal design of a 400V Li-Ion accumulator pack with integrated BMS for Formula Bharat competition.</p>
+            <div class="research-authors">Ankit Shaw, Kunal R. Solanki</div>
+            <a href="#" class="research-link">Read Paper &#8599;</a>
+        </div>
+
+        <div class="research-card">
+            <div class="research-meta">
+                <span class="research-tag">Chassis</span>
+                <span class="research-year">2024</span>
+            </div>
+            <h3>Torsional Rigidity Optimization of a Chromoly Space-Frame Chassis</h3>
+            <p>FEA-driven optimization of the AISI 4130 tubular space-frame for maximum torsional stiffness at minimum weight.</p>
+            <div class="research-authors">Rudra Anjiwadekar, Priyanshu Singh</div>
+            <a href="#" class="research-link">Read Paper &#8599;</a>
+        </div>
+
+        <!-- Add more research-card blocks here -->
+
+    </section>
+
+    <footer><p>&copy; 2024 Team Road Runner Electric.</p></footer>
 </body>
 </html>

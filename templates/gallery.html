@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet the Team - TRR Electric</title>
+    <title>Gallery - TRR Electric</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-
     <nav class="navbar">
         <div class="logos-wrapper">
             <a href="/" class="logo-container">
@@ -43,28 +42,37 @@
         nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { btn.classList.remove('open'); nav.classList.remove('open'); }));
     </script>
 
-    <section class="section-dark" style="min-height: 100vh; padding-top: 120px;">
-        <h2>MEET THE <span class="highlight">CREW</span></h2>
-        
-        <div class="team-grid">
-            
-            <div class="team-card">
-                <div class="member-img-box"><img src="{{ url_for('static', filename='person3.jpg') }}" alt="Member"></div>
-                <div class="member-info"><h3>RAHUL M.</h3><p class="role">Technical Head</p></div>
-            </div>
-
-            <div class="team-card">
-                <div class="member-img-box" style="background: #222;"></div>
-                <div class="member-info"><h3>PRIYA S.</h3><p class="role">Electrical Lead</p></div>
-            </div>
-
-            <div class="team-card">
-                <div class="member-img-box" style="background: #222;"></div>
-                <div class="member-info"><h3>AMIT B.</h3><p class="role">Chassis Lead</p></div>
-            </div>
-
-            </div>
+    <section class="page-hero">
+        <h1>GALLERY</h1>
+        <p>Behind the scenes, on the track, and in the workshop.</p>
     </section>
 
+    <!-- Filter tabs -->
+    <section class="gallery-section">
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="car">The Car</button>
+            <button class="filter-btn" data-filter="team">Team</button>
+            <button class="filter-btn" data-filter="events">Events</button>
+        </div>
+
+        <!-- Empty state — replace this div with gallery grid once photos are available -->
+        <div class="gallery-empty">
+            <div class="empty-icon">&#9724;</div>
+            <h3>Photos Coming Soon</h3>
+            <p>We're gearing up. Check back after the next event.</p>
+        </div>
+
+        <!-- Gallery grid — uncomment and populate when photos are ready
+        <div class="gallery-grid">
+            <div class="gallery-item" data-category="car">
+                <img src="{{ url_for('static', filename='gallery/photo1.jpg') }}" alt="Car photo">
+                <div class="gallery-overlay"><span>Chassis Build</span></div>
+            </div>
+        </div>
+        -->
+    </section>
+
+    <footer><p>&copy; 2024 Team Road Runner Electric.</p></footer>
 </body>
 </html>

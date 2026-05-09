@@ -87,6 +87,21 @@ def team_page():
     return render_template('team.html')
 
 
+@app.route('/gallery')
+def gallery_page():
+    return render_template('gallery.html')
+
+
+@app.route('/brochure')
+def brochure_page():
+    return render_template('brochure.html')
+
+
+@app.route('/research')
+def research_page():
+    return render_template('research.html')
+
+
 @app.route('/contact', methods=['GET', 'POST'])
 def contact_page():
     if request.method == 'POST':
