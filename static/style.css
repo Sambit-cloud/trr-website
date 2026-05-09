@@ -66,10 +66,17 @@ body {
 
 @media (max-width: 768px) {
     .dropdown-menu {
-        position: static; border: none; background: transparent;
+        position: static; border: none; background: #0a0f18;
         padding: 0; display: block; box-shadow: none;
+        margin-top: 0; padding-top: 0;
     }
-    .dropdown-menu li a { padding: 12px 36px; border-bottom: 1px solid #111; font-size: 0.9rem; }
+    .dropdown-menu::before { display: none; }
+    .dropdown-menu li a {
+        padding: 12px 40px; border-bottom: 1px solid #111;
+        font-size: 0.85rem; color: #aaa;
+        text-align: left; display: block; width: 100%;
+    }
+    .dropdown-toggle { pointer-events: none; }
 }
 
 /* Hamburger */
@@ -394,7 +401,7 @@ footer { text-align: center; padding: 20px; background: black; color: #555; font
     .nav-links.open { display: flex; }
     .nav-links li { width: 100%; }
     .nav-links a { display: block; padding: 14px 24px; border-bottom: 1px solid #111; }
-    .nav-links li:last-child a { margin: 10px 20px; border-radius: 4px; text-align: center; border-bottom: none; }
+    .nav-links > li:last-child > a { margin: 10px 20px; border-radius: 4px; text-align: center; border-bottom: none; }
     .logo-text { display: none; }
     .partner-logo, .sae-logo, .team-logo { height: 36px; }
 
