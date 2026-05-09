@@ -106,12 +106,19 @@ body {
     font-family: var(--font-header); letter-spacing: 1px;
 }
 
-.tech-image { flex: 1; }
+.tech-image { flex: 1; overflow: hidden; border-radius: 8px; border: 1px solid #333; box-shadow: 0 0 20px rgba(0, 240, 255, 0.1); transition: 0.3s; }
 .tech-image img {
-    width: 100%; border-radius: 8px; border: 1px solid #333;
+    width: 100%; border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 240, 255, 0.1); transition: 0.3s;
 }
 .tech-image img:hover { transform: scale(1.02); box-shadow: 0 0 30px rgba(0, 240, 255, 0.3); }
+.tech-video {
+    width: 100%; display: block;
+    object-fit: cover; object-position: center;
+    aspect-ratio: 16/9;
+    transition: 0.3s;
+}
+.tech-image:hover .tech-video { transform: scale(1.02); box-shadow: 0 0 30px rgba(0, 240, 255, 0.3); }
 
 /* Mobile Responsive for Tech Section */
 @media (max-width: 768px) {

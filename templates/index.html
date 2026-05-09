@@ -52,10 +52,18 @@
                     <li>Weight: 28 kg</li>
                 </ul>
             </div>
-            <div class="tech-image"><img src="{{ url_for('static', filename='chassis.jpg') }}" alt="Chassis"></div>
+            <div class="tech-image">
+                <video class="tech-video" autoplay muted loop playsinline>
+                    <source src="/assets/videos/chassis.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
         <div class="tech-showcase reverse">
-            <div class="tech-image"><img src="{{ url_for('static', filename='accumulator.jpg') }}" alt="Accumulator"></div>
+            <div class="tech-image">
+                <video class="tech-video" autoplay muted loop playsinline>
+                    <source src="/assets/videos/accumulator.mp4" type="video/mp4">
+                </video>
+            </div>
             <div class="tech-text">
                 <h3>HIGH VOLTAGE <span class="highlight">ACCUMULATOR</span></h3>
                 <p>Custom-designed Li-Ion battery pack with integrated BMS.</p>
